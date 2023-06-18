@@ -1,7 +1,7 @@
 button {
     background-color: #FDFDFD;
-    color: #7c0808;
-    border: 2px solid #7c0808;
+    color: var( --cor-principal);
+    border: 2px solid var( --cor-principal);
     padding: 0.3rem 0.6rem;
     font-size: 1rem;
     cursor: pointer;
@@ -12,7 +12,7 @@ button {
 }
 
 button:hover {
-    background-color: #810000;
+    background-color: var(--cor-background-botao);
     color: #fff;
 }
 
@@ -21,7 +21,7 @@ button:hover > i {
 }
 
 button i {
-    color: #7c0808;
+    color: var( --cor-principal);
     font-weight: bold;
     pointer-events: none;  /* Cancela o click do mouse nos icones*/
 } 

@@ -1,6 +1,6 @@
 #todo-form, #edit-form {
     padding: 1rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var( --cor-da-borda);
 }
 
 #todo-form p, #edit-form p {
