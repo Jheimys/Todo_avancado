@@ -1,0 +1,35 @@
+button {
+    background-color: #FDFDFD;
+    color: #7c0808;
+    border: 2px solid #7c0808;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #810000;
+    color: #fff;
+}
+
+button:hover > i {
+    color: #fff;
+}
+
+button i {
+    color: #7c0808;
+    font-weight: bold;
+    pointer-events: none;  /* Cancela o click do mouse nos icones*/
+} 
+
+input, select {
+    padding: 0.25rem 0.5rem;
+}
+
+.hide {
+    display: none;
+}

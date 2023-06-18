@@ -1,0 +1,22 @@
+body{
+    background-image: url("../img/samurai.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.todo-container{
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #FDFDFD;
+    padding: 1.5rem;
+    border-radius: 15px;
+    opacity: 0.95;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}

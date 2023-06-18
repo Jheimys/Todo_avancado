@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/button.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
+    <link rel="stylesheet" href="./assets/css/seach.css" />
+    <link rel="stylesheet" href="./assets/css/tasks.css" />
     <!-- Fonte  Awesome -->
     <link
       rel="stylesheet"
@@ -16,11 +21,12 @@
   </head>
   <body>
     <div class="todo-container">
+      <!-- Main title -->
       <header>
         <h1>Todo Avançado</h1>
       </header>
 
-      <!-- Formulário de tarefas -->
+      <!-- Form for entering tasks -->
       <form id="todo-form">
         <p>Adicione a sua tarefa:</p>
         <div class="form-control">
@@ -31,8 +37,8 @@
         </div>
       </form>
 
-      <!-- formulário de edição -->
-      <form id="edit-form">
+      <!-- Task edit form -->
+      <form id="edit-form" class="hide">
         <div class="form-control">
           <input type="text" id="edit-input" />
           <button type="submit">
@@ -42,7 +48,7 @@
         <button id="cancel-edit-btn">Cancelar</button>
       </form>
 
-      <!-- Barra de pesquisa -->
+      <!-- Search bar -->
       <div id="toolbar">
         <div id="search">
           <h4>Pesquisar:</h4>
@@ -62,6 +68,8 @@
           </select>
         </div>
       </div>
+
+      <!-- Tasks -->
       <div id="todo-list">
         <div class="todo">
           <h3>Estou fazendo alguma coisa ...</h3>
