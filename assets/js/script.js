@@ -14,6 +14,11 @@
     //Tasks
     const todoList = document.querySelector('#todo-list')
 
+    //Search bar
+    const searchInput = document.querySelector('#search-input')
+    const eraseBtn = document.querySelector('#erase-button')
+    const filterBtn = document.querySelector('#filter-select')
+
     let oldInputValue
 
     // ----------------------------    FUNCTIONS ------------------------------------------------------------------
@@ -63,6 +68,21 @@
 
             if(todoTitle.innerText === oldInputValue){
                 todoTitle.innerText = text
+            }
+        })
+    }
+
+    const getSearchTodos = (search) => {
+        const todos = document.querySelectorAll('.todo')
+
+        todos.forEach((todo) => {
+            let todoTitle = todo.querySelector('h3').innerText.toLowerCase()
+            const nomalizeSearch = search.toLowerCase()
+
+            todo.style.display = 'flex'
+
+            if(!todoTitle.includes(nomalizeSearch)){
+                todo.style.display = 'none' 
             }
         })
     }
@@ -123,6 +143,20 @@
         }
 
         toggleForms()
+    })
+
+    searchInput.addEventListener('keyup', (e) => {
+        const search = e.target.value
+        
+        getSearchTodos(search)
+    })
+
+    eraseBtn.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        searchInput.value = ''
+
+        searchInput.dispatchEvent(new Event('keyup'))
     })
 
 })()
