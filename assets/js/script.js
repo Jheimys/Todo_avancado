@@ -23,7 +23,7 @@
 
     // ----------------------------    FUNCTIONS ------------------------------------------------------------------
     
-    const saveTodo = (texto) => {
+    const saveTodo = (texto, done = 0, save = 1) => {
 
         const todo = document.createElement('div')
         todo.classList.add('todo')
@@ -46,6 +46,15 @@
         deletBtn.classList.add('remove-todo')
         deletBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>'
         todo.appendChild(deletBtn)
+
+        //Utiizando dados sa local Storage
+        if(done){
+            todo.classList.add('done')
+        }
+
+        if(save){
+            saveTodoLocalStorage({texto, done})
+        }
 
         todoList.appendChild(todo)
 
@@ -189,5 +198,20 @@
         
         filterTodos(filterValue)
     })
+
+//-------------------------------- LOCAL STORAGE ----------------------------------------------
+
+const getTodosLocalStorage = () => {
+    const todos = JSON.parse(localStorage.getItem('todos')) || []
+    return todos
+}
+
+const saveTodoLocalStorage = (todo) => {
+    const todos = getTodosLocalStorage()
+
+    todos.push(todo)
+
+    localStorage.setItem('todos', JSON.stringify(todos))
+}
 
 })()
