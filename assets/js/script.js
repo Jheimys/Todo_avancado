@@ -77,7 +77,10 @@
 
             if(todoTitle.innerText === oldInputValue){
                 todoTitle.innerText = text
+
+                updateTodoLocalStorage(oldInputValue, text)
             }
+
         })
     }
 
@@ -146,6 +149,7 @@
         
         if(targetEl.classList.contains('finish-todo')) {
             parentEl.classList.toggle('done')
+            updateTodoStatusLocalStorage(todoTitle)
         }
 
         if(targetEl.classList.contains('edit-todo')) {
@@ -157,6 +161,7 @@
 
         if(targetEl.classList.contains('remove-todo')) {
             parentEl.remove()
+            removeTodoLocalStorage(todoTitle)
         }
     })
 
@@ -213,5 +218,43 @@ const saveTodoLocalStorage = (todo) => {
 
     localStorage.setItem('todos', JSON.stringify(todos))
 }
+
+const loadTodos = () => {
+    const todos = getTodosLocalStorage()
+
+    todos.forEach((todo) => {
+        saveTodo(todo.texto, todo.done, 0)
+    })
+}
+
+const removeTodoLocalStorage = (todoText) => {
+    const todos = getTodosLocalStorage()
+
+    const filteredTodos = todos.filter((todo) => todo.texto !== todoText)
+
+    localStorage.setItem('todos', JSON.stringify(filteredTodos))
+}
+
+const updateTodoStatusLocalStorage = (todoText) => {
+    const todos = getTodosLocalStorage()
+
+    todos.map((todo) => 
+        todo.texto === todoText ? (todo.done = !todo.done) : null
+    )
+
+    localStorage.setItem('todos', JSON.stringify(todos))
+}
+
+const updateTodoLocalStorage = (todoOldText, todoNewText) => {
+    const todos = getTodosLocalStorage()
+
+    todos.map((todo) => 
+        todo.texto === todoOldText ? (todo.texto = todoNewText) : null
+    )
+
+    localStorage.setItem('todos', JSON.stringify(todos))
+}
+
+loadTodos()
 
 })()
