@@ -29,7 +29,6 @@ e também  trabalhamos com o LocalStorage para que os dados fornecidos fiquem de
 - HTML
 - CSS
 - JavaScript
-- React
 
 ## Autor
 
