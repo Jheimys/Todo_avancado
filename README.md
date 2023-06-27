@@ -20,9 +20,9 @@ como feita e excluir tarefas. Além de outras funcionalidades como de busca e fi
 Para desenvolver o projeto foram ultilizados HTMl, CSS e JavaScript onde manupulamos o DOM, criamos diferentes tipos de eventos e funções 
 e também  trabalhamos com o LocalStorage para que os dados fornecidos fiquem de forma percistente na web.
 
-<!--   <p align=center>
-    <image width="670" heigth="570" src='https://github.com/Jheimys/assets/blob/master/organo.png'>
-  </p> -->
+   <p align=center>
+    <image width="670" heigth="570" src='https://github.com/Jheimys/assets/blob/master/todoavaFoto.png'>
+  </p> 
 
 # Tecnologias:
 
