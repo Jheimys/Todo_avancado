@@ -1,11 +1,9 @@
-# Todo_avancado
-
-# Nerdflix
+# Todo List
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/Jheimys/Electronic_battery/blob/master/LICENCE)
 
 <p align=center>
-  <image width="670" heigth="770" src='https://github.com/Jheimys/assets/blob/master/nerdflix.png'>
+  <image width="670" heigth="770" src='https://github.com/Jheimys/assets/blob/master/todoAva.gif'>
 </p>
 
 ## Bem vindo! 👋
@@ -16,11 +14,11 @@ Estou sempre buscando melhorar meu código, Ficarei feliz com seu feedback.
 
 # O Projeto
 
-O Nerdflix foi desenvolvido baseado no layout do Netflix. Nele há uma série de videos sobre matemática, quimíca, fisíca, games, filmes e
-programação. O objetivo é promover cultura e ciência.
+O Todo List é  útil para planejar e organizar nossas tarefas diárias. No Todo List podemos: adicionar tarefas, atualizar tarefas, marcar 
+como feita e excluir tarefas. Além de outras funcionalidades como de busca e filtro das tarefas.
 
-O React foi a tecnologia utilizada na elaboração do projeto, nele criei e estilizei componentes do zero. São fundamentais o
-conhecimentos em JavaScript e CSS.
+Para desenvolver o projeto foram ultilizados HTMl, CSS e JavaScript onde manupulamos o DOM, criamos diferentes tipos de eventos e funções 
+e também  trabalhamos com o LocalStorage para que os dados fornecidos fiquem de forma percistente na web.
 
 <!--   <p align=center>
     <image width="670" heigth="570" src='https://github.com/Jheimys/assets/blob/master/organo.png'>
